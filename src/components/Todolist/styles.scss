@@ -1,0 +1,98 @@
+@use '../../styles/_vars';
+
+.main_card{
+padding:20px;
+height:80%;
+background-color: vars.$lightGrayOpacity;
+border: 2px vars.$grey solid;
+border-radius: 30px;
+margin:30px;
+color: vars.$blue;
+overflow: auto;
+}
+
+header{border-bottom: 1px solid vars.$grey;
+  border-top: 1px solid vars.$grey;}
+
+.card{height:80vh;
+width: 100%;
+margin:auto }
+
+.header_todolist{
+  background-color: vars.$lightgrey;
+  display: flex;
+  padding:10px;
+}
+
+.item_card{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin:5px;
+  & li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#add_card_div{
+  border-bottom:2px vars.$lightgrey solid;
+  width:100%;
+
+  & button {
+    border: none;
+    background: none;
+  }
+}
+
+.form_card{
+  width:100%
+}
+
+#add_card{
+  margin:10px
+}
+
+.inputItem {
+  width: 35%;
+}
+
+.header_icon {
+  font-size: 1.5rem;
+  color: vars.$blue;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+// BreakPoint pour la mise en forme de la version desktop
+
+@media screen and (min-width: 1000px) {
+  .item_card{
+    padding: 0 10rem;
+
+    & li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  #add_card_div{
+    border-bottom: none;
+  }
+
+  .header_todolist{
+    background-color: vars.$lightGrayOpacity;
+    display: flex;
+    padding: 0 5rem;
+    align-items: center;
+  }
+
+  .header_icon {
+    cursor: pointer;
+  }
+
+  .form_card{
+    width:75%;
+    margin: 0 auto;
+  }
+}

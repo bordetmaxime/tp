@@ -1,0 +1,175 @@
+@use '../../styles/_vars';
+
+.header_welcome {
+  justify-content: center;
+  margin:auto;
+  display: flex;
+  align-items:center;
+  font-size: 10vw;
+}
+
+.header_welcome img {
+  width:50vw;
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+
+  & span {
+    color: vars.$turquoise;
+    font-weight: bold;
+  }
+}
+
+.auth, .start { 
+  text-align: center;
+  margin:10px;
+}
+
+.start {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin:10px auto;
+  width: 80%
+}
+
+.content_welcome{
+  width: 85%;
+  flex-direction: column;
+  margin:auto;
+  text-align:center;
+  border : 2px vars.$blue solid;
+  padding : 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 0.5em silver, 0 0 5em silver , 0 0 0.5em silver;
+  background-color: vars.$lightGrayOpacity;
+
+  & p {
+    padding-bottom: 1rem;
+  }
+}
+
+.connection_button {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome {
+  margin : auto ;
+  overflow: auto;
+  height: 100vh;
+}
+
+.welcome button {
+  background-color:vars.$blue;
+  border-radius:10px; 
+  box-shadow: 0 0 0.5em silver, 0 0 5em silver , 0 0 0.5em silver;
+  border: none;
+  color : white;
+  padding: 10px 30px;
+  margin:10px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}
+
+
+.more-information{
+  color:  vars.$blue;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  font-size: 1.3rem;
+  padding: 1rem;
+
+  &__succes {
+    color: green;
+  }
+
+  &__error {
+    color: red;
+  }
+}
+
+.apropos {
+  padding: 1rem;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+
+  &__link {
+    text-align: center;
+    padding: 1rem;
+    color: vars.$turquoise;
+    font-weight: bold;
+
+  }
+
+  &__cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__dev {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  & h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem 0;
+  }
+
+  & h2 {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+  }
+
+  & img {
+    max-width: 300px;
+    border-radius: 50%;
+  }
+}
+
+// BreakPoint pour la mise en forme de la version desktop
+
+@media screen and (min-width: 1000px) {
+  .header_welcome img {
+    max-width: 300px;
+  }
+
+  .more-information{
+    display: none;
+  }
+
+  .start{
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .auth {
+    width: 30%;
+    margin: 10px auto;
+  }
+
+  .apropos {
+    flex-direction: row;
+
+  }
+}

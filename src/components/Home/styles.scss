@@ -1,0 +1,65 @@
+@use '../../styles/_vars';
+
+// Composant home
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width:100%
+}
+
+// Composant content
+.content {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 2;
+  overflow: auto;
+  border-top: 1px solid vars.$lightgrey;
+
+
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border: 2px solid vars.$turquoise;
+    box-shadow: 0 0 0.5em vars.$lightgrey, 0 0 5em vars.$lightgrey , 0 0 0.5em vars.$lightgrey;
+    color: vars.$blue;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin:1rem
+  }
+
+  & path {
+    stroke: vars.$blue;
+  }
+
+  &__button {
+    padding: 0.5rem;
+    
+  }
+
+  h3 {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: vars.$blue;
+  }
+
+}
+
+// BreakPoint pour la mise en forme de la version desktop
+@media screen and (min-width: 1000px) {
+  .content {
+    border-top: none;
+
+    &__button {
+      cursor: pointer;
+    }
+  }
+}

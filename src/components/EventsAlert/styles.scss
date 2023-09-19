@@ -1,0 +1,37 @@
+@use '../../styles/_vars';
+
+.eventsAlert {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom : 1px solid vars.$lightgrey;
+  color: vars.$blue;
+}
+
+.eventsAlert span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 0 0 0.2em vars.$lightgrey, 0 0 2em vars.$lightgrey , 0 0 0.2em vars.$lightgrey;
+  padding: 15px;
+  border : 2px solid vars.$lightgrey;
+}
+
+.eventsAlert h2 {
+  color:  vars.$blue;
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .eventsAlert {
+    justify-content: space-evenly;
+    border-bottom : none;
+  }
+
+  .eventsAlert h2 {
+    color:  vars.$blue;
+    font-size: 2rem;
+  }
+}

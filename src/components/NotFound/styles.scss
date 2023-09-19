@@ -1,0 +1,71 @@
+@use '../../styles/_vars';
+
+.not-found {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient( rgba(255,255,255,0.9),rgba(255, 255, 255, 0.7)), center / cover no-repeat url('../../assets/backgrounds/baby-g0a61dd69a_1920.jpg') ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5rem 2rem;
+  align-items: center;
+
+  & h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: vars.$turquoise;
+    padding-bottom: 20rem;
+  }
+
+  & h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: vars.$blue;
+  }
+
+  & button {
+    background-color:vars.$blue;
+    border-radius:10px; 
+    box-shadow: 0 0 0.5em silver, 0 0 5em silver , 0 0 0.5em silver;
+    border: none;
+    color : white;
+    padding: 10px 30px;
+    margin:10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+}
+
+.not-authorized {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient( rgba(255,255,255,0.9),rgba(255, 255, 255, 0.7)), center / cover no-repeat url('../../assets/backgrounds/pexels-monstera-7114237.jpg') ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5rem 2rem;
+  align-items: center;
+
+  & h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: vars.$turquoise;
+    padding-bottom: 20rem;
+  }
+
+  & h2 {
+    font-size: 3rem;
+    text-align: center;
+    color: vars.$blue;
+  }
+
+  & button {
+    background-color:vars.$blue;
+    border-radius:10px; 
+    box-shadow: 0 0 0.5em silver, 0 0 5em silver , 0 0 0.5em silver;
+    border: none;
+    color : white;
+    padding: 10px 30px;
+    margin:10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+}

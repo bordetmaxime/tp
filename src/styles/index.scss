@@ -1,0 +1,54 @@
+@use '_reset';
+@use '_vars';
+
+body {
+  font-family: 'Indie Flower', cursive;
+}
+
+input, textarea {
+  padding: 0.5rem;
+}
+
+input, select {
+  border: 1px solid vars.$blue;
+  height: 2rem;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+}
+
+input, select, textarea {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+}
+
+label {
+  padding-left: 1rem;
+}
+
+.deletePopUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: vars.$lightgrey;
+  width: 16rem;
+  height: 10rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 5px 16px 0px vars.$blue;
+}
+
+svg path {
+  pointer-events: none;
+}
+
+// BreakPoint pour la mise en forme de la version desktop
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: 20px;
+  }
+}

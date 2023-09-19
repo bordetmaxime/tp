@@ -1,0 +1,27 @@
+@use '../../styles/_vars';
+
+.child, .child select {
+  width: 100%;
+  text-align: center;
+  height: 2rem;
+  font-family: 'Indie Flower';
+  font-size: 1.05rem;
+}
+
+.child select {
+  border: none;
+  color: vars.$blue;
+  background-color: white;
+  padding : 0 1rem;
+  margin: 0;
+}
+
+// BreakPoint pour la mise en forme de la version desktop
+
+@media screen and (min-width: 1000px) {
+  .child, .child select {
+    width: 70%;
+    margin: auto;
+    margin-top: 0.5rem;
+  }
+}

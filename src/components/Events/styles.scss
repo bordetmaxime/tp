@@ -1,0 +1,166 @@
+@use '../../styles/_vars';
+
+// Composant Event dans le fichier index.js
+.events {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  color: vars.$blue;
+}
+
+// Composant EventsList
+.eventsList {
+  flex-grow: 1;
+  border-top: 1px vars.$blue solid;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid  vars.$blue;
+  
+    & h2 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: vars.$turquoise;
+    }
+
+    & h3 {
+      color: vars.$blue;
+    }
+  }
+}
+
+// Composant EventForm
+.event {
+  flex-grow: 1;
+
+  &__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+
+    & input, select {
+      height: 2rem;
+    }
+
+    & textarea {
+      height: 10rem;
+    }
+  }
+
+  &__info {
+    color: red;
+    margin: 1rem;
+  }
+
+  &__buttons {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: vars.$blue;
+  }
+
+  // composant Event (version)
+  &__infos {
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__data {
+    height: 2rem;
+    margin: 0.5rem;
+  }
+
+  &__title4 {
+    padding-left: 1rem;
+    color: vars.$blue;
+    font-weight: bold;
+    border-bottom: 1px solid vars.$lightgrey;
+  }
+
+}
+
+// composant AddEvent
+.addEvent {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__button {
+    font-size: 2rem;
+    margin: 1rem;
+    color:  vars.$blue;
+  }
+}
+
+.event__form input, select, textarea{
+  border : 1px solid  vars.$blue;
+
+}
+
+.event__form button { background-color: vars.$blue;
+color: white;
+border: none;
+padding : 8px 20px;
+border-radius: 10px;}
+
+
+// BreakPoint pour la mise en forme de la version desktop
+
+@media screen and (min-width: 1000px) {
+  .eventsList {
+    margin-top: 2rem;
+
+    &__item {
+      justify-content: space-around;
+    
+      & h2 {
+        font-size: 2rem;
+      }
+  
+      & h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .addEvent {
+  
+    &__button {
+      cursor: pointer;
+    }
+  }
+
+  .event{
+    width:100%
+  }
+  .event {
+  
+  
+    &__item {
+      width: 75%;
+    }
+  
+    &__buttons {
+      width: 75%;
+      justify-content: space-around;
+    }
+  }
+  
+}

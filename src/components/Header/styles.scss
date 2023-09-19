@@ -1,0 +1,69 @@
+@use '../../styles/_vars';
+
+.header {
+  display: flex;
+  align-items: center;
+  background: vars.$lightgrey;
+  background: linear-gradient(180deg, rgba(211,211,211,0.5) 0%, rgba(255,255,255,0.5) 100%);
+
+  &__appLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border: 1px solid ;
+    color: vars.$grey;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
+
+  &__hello {
+    padding: 0.5rem;
+    width: 60vw;
+  }
+}
+
+.header span {
+  font-weight: bold;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color:vars.$blue;
+}
+
+.header img {
+  width: 20vw;
+}
+
+.logout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25vw;
+  font-size: 2rem;
+  color: vars.$turquoise;
+  padding-right: 1rem;
+
+  & p {
+    font-size: 1rem;
+  }
+}
+
+// BreakPoint pour la mise en forme de la version desktop
+@media screen and (min-width: 1000px) {
+  .header img, .logout-button {
+    width: 10vw;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  .logout-button {
+    cursor: pointer;
+  }
+}

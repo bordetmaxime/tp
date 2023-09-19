@@ -1,0 +1,187 @@
+@use '../../styles/_vars';
+
+// composant members
+.members {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+// composant content
+.title-member {
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: center;
+  color: vars.$blue;
+}
+
+
+// composant AddMember
+.addMember {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__button {
+    font-size: 2rem;
+    margin: 1rem;
+    color: vars.$blue;
+  }
+}
+
+// composant Member
+.member {
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  color: vars.$blue;
+  padding: 0 0.5rem;
+
+  &__form, &__infos {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    flex-grow: 1;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+
+    & input, select {
+      height: 2rem;
+    }
+
+    & textarea {
+      height: 10rem;
+    }
+  }
+
+  &__title3 {
+    width: 95%;
+    font-size: 1.2rem;
+  }
+
+  &__title2 {
+    font-size: 1.3rem;
+  }
+
+  &__title2, &__title3 {
+    border-bottom: 1px solid vars.$lightgrey;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  &__bloc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+  }
+
+  &__buttons {
+    width: 95%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 2rem;
+    color: vars.$blue;
+  }
+
+  &__button {
+    cursor: pointer;
+  }
+
+  &__alerte {
+    color: red;
+  }
+
+  &__submit {
+    background-color:vars.$blue;
+    border-radius:10px; 
+    box-shadow: 0 0 0.5em silver, 0 0 5em silver , 0 0 0.5em silver;
+    border: none;
+    color : white;
+    padding: 10px 30px;
+    margin:10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+}
+
+.member__form {
+
+  & .member {
+    &__item {
+      align-items: stretch;
+    }
+  }
+
+}
+
+.semi {
+    width: 45%;
+    align-items: center;
+  }
+
+// class de la fiche d'information du membre
+
+.member__title4{
+  color: vars.$blue;
+  font-weight: bold;
+}
+
+.member p {
+  height: 2rem;
+  margin: 0.5rem;
+}
+
+// Breakpoint pour un affichage desktop
+
+@media screen and (min-width: 1000px) {
+  .title-member {
+    font-size: 2rem;
+  }
+
+  .member {
+    width: 75%;
+    margin: auto;
+  
+    &__form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    &__title2 {
+      font-size: 2rem;
+    }
+
+    &__title3 {
+      font-size: 1.5rem;
+    }
+
+    &__item {
+      align-items: center;
+    }
+
+    & p {
+      padding-left: 1rem;
+    }
+  }
+
+  .semi {
+    align-items: center;
+  }
+
+}

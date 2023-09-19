@@ -1,0 +1,153 @@
+@use '../../styles/_vars';
+
+.form_div{
+  text-align: center;
+}
+
+.todolist{
+  width:100%;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#add_card_div{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+#add_card_todo{
+  border-bottom: 1px solid vars.$blue;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & button {
+    border: none;
+    background: none;
+  }
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: vars.$blue;
+  margin-left: 1rem;
+
+  &-item {
+    height: 2rem;
+    margin: 0.5rem;
+  }
+}
+
+.left {
+  margin-left: 4rem;
+}
+
+.all_card{
+  display: flex;
+  flex-direction: column;
+  flex-grow:1;
+  overflow: auto;
+}
+
+
+.header_alltodolists{
+  display: flex;
+  padding:0.5rem;
+  justify-content: space-between;
+  margin:3px;
+  border:1px  solid vars.$blue;
+  background-color: vars.$lightgrey;
+  align-items: center;
+}
+
+.header_alltodolists svg{
+  color: vars.$blue;
+  margin-right:10px
+}
+
+.title{
+  margin:0px;
+  width:100%;
+  font-size:1.3rem;
+  margin-left: 10px;
+  color: vars.$blue;
+}
+
+.link_alltodolists {
+  flex-grow: 1;
+}
+
+.main_alltodolists{
+  display: none;
+}
+
+.form_modify_todolist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.not-list {
+  text-align: center;
+}
+
+// BreakPoint pour la mise en forme de la version desktop
+
+@media screen and (min-width: 1000px) {
+
+  #add_card {
+    width: 50%;
+  }
+
+  #add_card_todo{
+    border-bottom: none;
+  }
+
+  .all_card {
+    width: 75%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .card_alltodolists{
+    padding: 1rem;
+    background-color: transparent;
+    justify-content: flex-start;
+    border-bottom: none;
+    height: 35vh;
+    width: 30%;
+  }
+
+  .header_alltodolists{
+    background-color: vars.$lightgrey;
+  }
+
+  .main_alltodolists{
+    display: flex;
+    background-color: rgba(255,255,255,0.5);
+    flex-grow: 1;
+    padding: 1rem;
+    color: vars.$blue;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .title{
+    font-size:2rem;
+  }
+
+  .icon, .icon-item {
+    cursor: pointer;
+  }
+}
+
+
+
